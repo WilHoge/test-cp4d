@@ -4,9 +4,18 @@ contexts:
     profile: source_2
     user: source_user_2
     services: {}
+- name: target
+  context:
+    profile: target
+    user: target_user
+    services: {}
 services: []
 users:
 - name: source_user_2
+  user:
+    password: {base64: cGFzc3dvcmQ=}
+    username: cpduser
+- name: target_user
   user:
     password: {base64: cGFzc3dvcmQ=}
     username: cpduser
@@ -14,9 +23,17 @@ profiles:
 - name: source_2
   profile:
     type: private
-    url: https://datafabric.ibmcloudpack.com:15274/
-    auto_updated_at: 1653998069
+    version: 4.0.0.0
+    url: https://cpd-cpd-instance.apps.demo.ibmdte.net
+    auto_updated_at: 1654001861
     user: source_user_2
+- name: target
+  profile:
+    type: private
+    version: 4.0.0.0
+    url: https://cpd-cpd-instance.apps.demo.ibmdte.net
+    auto_updated_at: 1654001870
+    user: target_user
 apiVersion: v1
 kind: Config
-current-context: source
+current-context: target
