@@ -1,0 +1,22 @@
+contexts:
+- name: source
+  context:
+    profile: source_2
+    user: source_user_2
+    services: {}
+services: []
+users:
+- name: source_user_2
+  user:
+    password: {base64: cGFzc3dvcmQ=}
+    username: cpduser
+profiles:
+- name: source_2
+  profile:
+    type: private
+    url: https://datafabric.ibmcloudpack.com:15274/
+    auto_updated_at: 1653998069
+    user: source_user_2
+apiVersion: v1
+kind: Config
+current-context: source
