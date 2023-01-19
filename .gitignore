@@ -49,3 +49,5 @@ celerybeat.pid
 .pyre/
 .pytype/
 cython_debug/
+logs
+mlruns
